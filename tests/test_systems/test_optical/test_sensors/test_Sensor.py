@@ -1,4 +1,5 @@
 """Tests for Sensor component."""
+
 # stdlib
 import logging
 
@@ -156,3 +157,14 @@ def test_get_efficiency():
     LOG.info(result)
 
     assert result.unit == unit.pct * unit.electron
+
+
+def test_get_datacube_size():
+    """Test get_datacube_size method."""
+
+    sensor = Sensor(n_px=(640, 512) * unit.pix, n_bit=14 * unit.bit)
+
+    result = sensor.get_datacube_size()
+    LOG.info(result)
+
+    assert result.unit == unit.bit

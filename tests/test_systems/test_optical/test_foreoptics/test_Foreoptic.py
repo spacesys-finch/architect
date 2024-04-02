@@ -1,4 +1,5 @@
 """Tests for Foreoptic component."""
+
 # stdlib
 import logging
 

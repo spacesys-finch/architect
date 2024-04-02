@@ -1,4 +1,5 @@
 """Satellite class tests."""
+
 # stdlib
 import logging
 

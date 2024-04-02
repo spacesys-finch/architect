@@ -1,4 +1,5 @@
 """Tests for transmissive diffractor component."""
+
 # stdlib
 import logging
 

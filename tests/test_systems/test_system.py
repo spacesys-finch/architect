@@ -1,4 +1,5 @@
 """System class tests."""
+
 # stdlib
 import logging
 

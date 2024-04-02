@@ -1,4 +1,5 @@
 """An assortment of utilities and classes for scientific computing."""
+
 # external
 import numpy as np
 from astropy.units.quantity import Quantity

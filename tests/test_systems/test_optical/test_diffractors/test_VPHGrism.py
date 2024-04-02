@@ -1,4 +1,5 @@
 """Tests for VPH Grism component."""
+
 # stdlib
 import logging
 

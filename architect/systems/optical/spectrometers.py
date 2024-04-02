@@ -1,4 +1,5 @@
 """Spectrometer classes."""
+
 # stdlib
 import logging
 import math

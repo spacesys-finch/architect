@@ -1,4 +1,5 @@
 """Component class."""
+
 # external
 import astropy.units as unit
 

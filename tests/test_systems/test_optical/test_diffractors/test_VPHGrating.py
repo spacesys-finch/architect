@@ -1,4 +1,5 @@
 """Tests for VPH Grating component."""
+
 # stdlib
 import logging
 

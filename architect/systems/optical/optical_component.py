@@ -1,4 +1,5 @@
 """Optical component class."""
+
 # stdlib
 import logging
 

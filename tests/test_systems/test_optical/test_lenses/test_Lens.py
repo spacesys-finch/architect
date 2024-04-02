@@ -1,4 +1,5 @@
 """Tests for AchromLens component."""
+
 # stdlib
 import logging
 
