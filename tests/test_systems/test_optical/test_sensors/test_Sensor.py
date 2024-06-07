@@ -66,6 +66,18 @@ def test_get_shape():
     assert result[1].decompose().unit == unit.m
 
 
+def test_get_noise_read():
+    """Test get_noise_read method."""
+
+    noise_read = 500 * unit.electron
+    sensor = Sensor(noise_read=noise_read)
+
+    result = sensor.get_noise_read()
+    LOG.info(result)
+
+    assert result == noise_read
+
+
 def test_get_area():
     """Test get_area method."""
 
@@ -100,6 +112,20 @@ def test_get_mean_dark_signal():
     LOG.info(result)
 
     assert result.decompose().unit == (unit.electron / unit.pix)
+
+
+def test_get_dark_shot_noise():
+    """Test get_dark_shot_noise method."""
+
+    ke = 1e3 * unit.electron
+    sensor = Sensor(
+        integration_time=166.7 * unit.ms, i_dark=140 * (ke / unit.pix / unit.s)
+    )
+
+    result = sensor.get_dark_shot_noise()
+    LOG.info(result)
+
+    assert result.decompose().unit == (unit.electron / unit.pix) ** 0.5
 
 
 def test_get_quantization_noise():
@@ -156,3 +182,15 @@ def test_get_efficiency():
     LOG.info(result)
 
     assert result.unit == unit.pct * unit.electron
+
+
+def test_get_waveband():
+    """Test get_waveband method."""
+
+    waveband = 800 * unit.nm
+    sensor = Sensor(waveband=waveband)
+
+    result = sensor.get_waveband()
+    LOG.info(result)
+
+    assert result == waveband
